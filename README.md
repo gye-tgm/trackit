@@ -17,6 +17,8 @@ pip -r install requirements.txt
 ```
 
 Coming up:
+* `app/constants.py`
+* `templates/404` or `templates/base.html`
 * An appropriate `.gitignore` file (for Python, Sphinx, however, no LaTeX)
 * More packages
 * Unit-testing

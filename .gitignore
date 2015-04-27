@@ -1,1 +1,7 @@
+# Pycharm
+.idea/
+**/__pycache__
+
 venv/
+
+app.db
