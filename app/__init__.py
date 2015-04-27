@@ -11,7 +11,6 @@ lm = LoginManager(app)
 from app import auth
 
 from app.tracking.views import mod as tracking_mod
-app.register_blueprint(tracking_mod, url_prefix='/')
 app.register_blueprint(tracking_mod, url_prefix='/tracking')
 
 from app.users.views import mod as user_mod

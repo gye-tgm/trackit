@@ -6,6 +6,4 @@ lm.login_view = 'users.login'
 
 @lm.user_loader
 def load_user(userid):
-    print(userid)
     return User.get(userid)
-    return User.query.filter_by(username=userid).one()

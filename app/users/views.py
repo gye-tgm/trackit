@@ -11,6 +11,4 @@ def login():
         login_user(form.user)
         flash("Login successful")
         return redirect(url_for('tracking.index'))
-
-    print(form.errors)
     return render_template('users/login.html', form=form)
