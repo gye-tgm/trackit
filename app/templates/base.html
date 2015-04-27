@@ -8,6 +8,8 @@
 
 {% from "forms/macros.html" import render_link %}
 
+{{ render_link("tracking.index", "Track") }} |
+
 {% if current_user.is_authenticated() %}
     Logged in as {{ current_user.username }} | {{ render_link("users.logout", "Logout") }}
 {% else %}
