@@ -38,3 +38,7 @@ def register():
 @mod.route('/')
 def index():
     return render_template('users/index.html')
+
+@mod.route('/admin')
+def admin():
+    return render_template('users/admin.html')

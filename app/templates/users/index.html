@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>
-        This is your personal page!
-    </p>
+    {{ super() }}
+    <div class="container">
+        <p>
+            This is your personal page!
+        </p>
 
-    {% if current_user.is_authenticated() %}
-        You are {{ current_user.username }}! Hi, how are you?
-    {% else %}
-        I don't recognize you, are you new?
-    {% endif %}
+        {% if current_user.is_authenticated() %}
+            You are {{ current_user.username }}! Hi, how are you?
+        {% else %}
+            I don't recognize you, are you new?
+        {% endif %}
+    </div>
 {% endblock %}

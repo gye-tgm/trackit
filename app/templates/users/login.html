@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-    {% from "forms/macros.html" import render_field %}
-    <form method="POST" action="{{ url_for('users.login', next=request.args.get('next', '')) }}">
-        {{ form.hidden_tag() }}
-        {{ render_field(form.name, placeholder="username") }}
-        {{ render_field(form.password,  placeholder="password") }}
-        <button type="submit" value="Login" id="sign_in">Log In</button>
-    </form>
+    {{ super() }}
+    {% import "bootstrap/wtf.html" as wtf %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                {{ wtf.quick_form(form) }}
+            </div>
+        </div>
+    </div>
 
+
+    {#    <div class="container">#}
+    {#        {% from "forms/macros.html" import render_field %}#}
+    {#        <form method="POST" action="{{ url_for('users.login', next=request.args.get('next', '')) }}">#}
+    {#            {{ form.hidden_tag() }}#}
+    {#            {{ render_field(form.name, placeholder="username") }}#}
+    {#            {{ render_field(form.password,  placeholder="password") }}#}
+    {#            <button type="submit" value="Login" id="sign_in">Log In</button>#}
+    {#        </form>#}
+    {#    </div>#}
 {% endblock %}
