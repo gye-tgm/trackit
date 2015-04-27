@@ -26,6 +26,7 @@ class RegisterForm(Form):
     name = StringField('Username', [InputRequired()])
     password = PasswordField('Password', [InputRequired()])
     confirm = PasswordField('Confirm', [InputRequired()])
+    submit = SubmitField('Register')
 
     def validate_password(form, field):
         if form.password.data != form.confirm.data:
