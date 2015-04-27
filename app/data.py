@@ -1,5 +1,6 @@
 from app import db
 
+
 class CRUDMixin(object):
     """
     Inheriting this class eliminates common code for the fundamental CRUD commands.

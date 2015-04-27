@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-    <h1>Bad things happen for a reason!</h1>
-    {% if current_user.is_authenticated() %}
-        Booyah, how are you {{ current_user.username }}
-    {% endif %}
-{% endblock %}

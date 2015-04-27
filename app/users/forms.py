@@ -6,8 +6,8 @@ from wtforms.validators import InputRequired
 
 
 class LoginForm(Form):
-    name = StringField('Username', validators=[InputRequired()])
-    password = PasswordField('Password', validators=[InputRequired()])
+    name = StringField('Username', [InputRequired()])
+    password = PasswordField('Password', [InputRequired()])
 
     def validate_password(form, field):
         try:
@@ -18,5 +18,4 @@ class LoginForm(Form):
             raise ValidationError("Invalid user")
         if not user.is_valid_password(form.password.data):
             raise ValidationError("Invalid password")
-
         form.user = user

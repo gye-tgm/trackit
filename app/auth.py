@@ -1,4 +1,3 @@
-from flask.ext.login import LoginManager
 from app.models.users import User
 from app import lm
 
@@ -6,5 +5,7 @@ from app import lm
 lm.login_view = 'users.login'
 
 @lm.user_loader
-def load_user(user_id):
-    return User.get(user_id)
+def load_user(userid):
+    print(userid)
+    return User.get(userid)
+    return User.query.filter_by(username=userid).one()

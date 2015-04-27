@@ -1,18 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
     {% from "forms/macros.html" import render_field %}
-    <form method="POST" action="." class="form form-horizontal">
-        <!-- Form Name -->
-        <legend>Log In</legend>
+    <form method="POST" action=".">
         {{ form.csrf_token }}
-        {{ render_field(form.name, class="input-xlarge",placeholder="username") }}
-        {{ render_field(form.password, class="input-xlarge", placeholder="password") }}
-        <div class="control-group">
-            <label class="control-label"></label>
-            <div class="controls">
-                <button type="submit" id="sign_in" class="btn btn-primary">Log In</button>
-            </div>
-        </div>
+        {{ render_field(form.name, placeholder="username") }}
+        {{ render_field(form.password,  placeholder="password") }}
+        <button type="submit" value="Login" id="sign_in">Log In</button>
     </form>
 
 {% endblock %}
