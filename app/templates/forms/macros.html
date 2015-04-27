@@ -11,3 +11,7 @@
         {% endif %}
     </div>
 {% endmacro %}
+
+{% macro render_link(url, text) %}
+    <a href="{{ url_for(url) }}">{{ text }}</a>
+{% endmacro %}

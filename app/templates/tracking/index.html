@@ -2,10 +2,5 @@
 {% block content %}
     <h1>Index page</h1>
 
-    {% if current_user.is_authenticated() %}
-        Welcome, {{ current_user.username }}
-    {% else %}
-        You are currently not logged in, however, you can change this by clicking on
-        <a href="{{ url_for('users.login') }}">this link</a>.
-    {% endif %}
+
 {% endblock %}

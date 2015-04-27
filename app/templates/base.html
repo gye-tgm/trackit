@@ -2,9 +2,19 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Mega Tracker</title>
+    <title>Mega Tracker - 1984 </title>
 </head>
 <body>
+
+{% from "forms/macros.html" import render_link %}
+
+{% if current_user.is_authenticated() %}
+    Logged in as {{ current_user.username }} | {{ render_link("users.logout", "Logout") }} </a>
+{% else %}
+    {{ render_link("users.login", "Login") }}
+{% endif %}
+
+<hr>
 
 {% block content %} {% endblock %}
 
