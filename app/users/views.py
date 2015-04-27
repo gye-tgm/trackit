@@ -11,7 +11,7 @@ def login():
     if form.validate_on_submit():
         login_user(form.user)
         flash("Login successful")
-        return redirect(url_for('users.index'))
+        return redirect(url_for('index.index'))
     return render_template('users/login.html', form=form)
 
 
