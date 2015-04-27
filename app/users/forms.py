@@ -19,3 +19,17 @@ class LoginForm(Form):
         if not user.is_valid_password(form.password.data):
             raise ValidationError("Invalid password")
         form.user = user
+
+
+class RegisterForm(Form):
+    name = StringField('Username', [InputRequired()])
+    password = PasswordField('Password', [InputRequired()])
+    confirm = PasswordField('Confirm', [InputRequired()])
+
+    def validate_password(form, field):
+        if form.password.data != form.confirm.data:
+            raise ValidationError("Passwords do not match")
+
+    def validate_name(form, field):
+        if User.query.filter(User.username == form.name.data).count() > 0:
+            raise ValidationError("User already exists")

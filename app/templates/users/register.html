@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+    Register
+
+    {% from "forms/macros.html" import render_field %}
+    <form method="POST" action=".">
+        {{ form.hidden_tag() }}
+        {{ render_field(form.name, placeholder="user") }}
+        {{ render_field(form.password, placeholder="password") }}
+        {{ render_field(form.confirm, placeholder="confirm") }}
+        <input type="submit">
+    </form>
+{% endblock %}

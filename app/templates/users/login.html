@@ -2,7 +2,7 @@
 {% block content %}
     {% from "forms/macros.html" import render_field %}
     <form method="POST" action=".">
-        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
         {{ render_field(form.name, placeholder="username") }}
         {{ render_field(form.password,  placeholder="password") }}
         <button type="submit" value="Login" id="sign_in">Log In</button>
