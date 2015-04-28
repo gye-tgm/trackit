@@ -14,6 +14,9 @@ from app import auth
 adm = Admin(app)
 from app import admin
 
+from app.post.views import mod as post_mod
+app.register_blueprint(post_mod, url_prefix='/post')
+
 from app.tracking.views import mod as tracking_mod
 app.register_blueprint(tracking_mod, url_prefix='/tracking')
 

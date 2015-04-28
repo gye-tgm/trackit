@@ -16,6 +16,9 @@
                 <p class="navbar-text">
                     {{ render_link("tracking.index", "Home") }}
                 </p>
+                <p class="navbar-text">
+                    <a href="{{ url_for("post.me") }}">Me</a>
+                </p>
                 {% if current_user.role == 1 %}
                     <p class="navbar-text">
                         <a href="/admin">Admin</a>
