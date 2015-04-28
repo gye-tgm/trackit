@@ -5,9 +5,35 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-4">
-                <h1>Track someone!</h1>
+                <p>
+                    Add an account
+                </p>
                 {{ wtf.quick_form(twform) }}
                 {{ wtf.quick_form(fbform) }}
+            </div>
+            <div class="col-xs-4">
+                {% if twaccounts is defined %}
+                    Your Twitter accounts:
+                    <ul>
+                        {% for x in twaccounts %}
+                            <li> @{{ x.username }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    You have no Twitter accounts registered.
+                {% endif %}
+            </div>
+            <div class="col-xs-4">
+                {% if fbaccounts is defined %}
+                    Your Facebook accounts:
+                    <ul>
+                        {% for x in fbaccounts %}
+                            <li> URL: {{ x.url}}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    You have no Facebook accounts registered.
+                {% endif %}
             </div>
         </div>
     </div>
