@@ -1,11 +1,13 @@
-What this project does
-======================
+Trackit
+=======
 
+What is it?
+-----------
 To put it charitably, users can **observe** people with this tool. For
 instance, they can add the social media links, e.g., Twitter, of a
 celebrity and **observe** them right away!
 
-What you will learn (Model)
+What's included?
 ----------------------------
 * A user can track many celebrities, and a celebrity can be tracked by many users. (Many-to-many relationships + Association object, we save a `following_since` variable on purpose)
 * The celebrity has multiple accounts, e.g., Twitter, Facebook, ... (One-to-many relationships)
@@ -31,6 +33,12 @@ requires.
 
 ```
 pip -r install requirements.txt
+```
+
+```
+(venv) > python
+>>> from app import db
+>>> db.create_all()
 ```
 
 Notes: 
