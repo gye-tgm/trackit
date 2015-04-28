@@ -1,33 +1,51 @@
 {% extends "bootstrap/base.html" %}
+{% from "forms/macros.html" import render_link %}
+
 {% block title %}Mega Tracker - 1984 {% endblock %}
 
-{% block content %}
-    {% from "forms/macros.html" import render_link %}
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-4">
-                {{ render_link("tracking.index", "Track") }} |
+{% block navbar %}
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Track-It
+                </a>
+            </div>
 
-                {% if current_user.is_authenticated() %}
-                    Logged in as <b>{{ current_user.username }}</b> | {{ render_link("user.logout", "Logout") }} |
-
-                    {% if current_user.role == 1 %}
+            <div class="navbar-left">
+                <p class="navbar-text">
+                    {{ render_link("tracking.index", "Home") }}
+                </p>
+                {% if current_user.role == 1 %}
+                    <p class="navbar-text">
                         <a href="/admin">Admin</a>
-                    {% endif %}
+                    </p>
+                {% endif %}
+            </div>
 
+            <div class="navbar-right">
+                {% if current_user.is_authenticated() %}
+                    <p class="navbar-text">
+                        Signed in as {{ current_user.username }}
+                    </p>
+                    <p class="navbar-text">
+                        {{ render_link("user.logout", "Logout") }}
+                    </p>
                 {% else %}
-                    {{ render_link("user.login", "Login") }} | {{ render_link("user.register", "Register") }} |
+                    <p class="navbar-text">
+                        {{ render_link("user.login", "Login") }}
+                    </p>
                 {% endif %}
             </div>
         </div>
-    </div>
+    </nav>
+{% endblock %}
+{% block content %}
 
-    <hr>
-
-
-    <div class="container">
-        {% import "bootstrap/utils.html" as utils %}
-        {{ utils.flashed_messages() }}
-    </div>
+<div class="container">
+    {% import "bootstrap/utils.html" as utils %}
+    {{ utils.flashed_messages() }}
+</div>
 
 {% endblock %}
+
