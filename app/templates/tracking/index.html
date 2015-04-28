@@ -3,8 +3,12 @@
     {{ super() }}
     {% import "bootstrap/wtf.html" as wtf %}
     <div class="container">
-        <h1>Track someone!</h1>
-        {{ wtf.quick_form(twform) }}
-        {{ wtf.quick_form(fbform) }}
+        <div class="row">
+            <div class="col-xs-4">
+                <h1>Track someone!</h1>
+                {{ wtf.quick_form(twform) }}
+                {{ wtf.quick_form(fbform) }}
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -1,6 +1,6 @@
-from app.models import TwitterAccount
+from app.models import TwitterAccount, FacebookAccount
 from app.tracking.forms import AddFbForm, AddTwitterForm
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash, url_for, redirect
 from flask.ext.login import login_required
 from flask.ext import login
 
@@ -14,12 +14,19 @@ def index():
     twform = AddTwitterForm(request.form)
 
     if twform.validate_on_submit():
-        u = login.current_user
         acc = TwitterAccount(username=twform.username.data)
+        u = login.current_user
         u.accounts.append(acc)
         u.save()
+        flash("Twitter acount added!")
+        return redirect(url_for("tracking.index"))
 
     if fbform.validate_on_submit():
-        pass
+        acc = FacebookAccount(url=fbform.url.data)
+        u = login.current_user
+        u.accounts.append(acc)
+        u.save()
+        flash("Facebook acount added!")
+        return redirect(url_for("tracking.index"))
 
     return render_template('tracking/index.html', fbform=fbform, twform=twform)
