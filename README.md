@@ -3,14 +3,15 @@ Trackit
 
 What is it?
 -----------
-To put it charitably, users can **observe** people with this tool. For
-instance, they can add the social media links, e.g., Twitter, of a
-celebrity and **observe** them right away!
+
+Nowadays, we have too many social media accounts. 
+
+Using this tool, a user can follow all updates of another user with just this single page. 
 
 What's included?
 ----------------------------
-* A user can track many celebrities, and a celebrity can be tracked by many users. (Many-to-many relationships + Association object, we save a `following_since` variable on purpose)
-* The celebrity has multiple accounts, e.g., Twitter, Facebook, ... (One-to-many relationships)
+* A user can track many users, and a user can be tracked by many users. (Many-to-many relationships + Association object, we save a `following_since` variable on purpose)
+* The user has multiple accounts, e.g., Twitter, Facebook, ... (One-to-many relationships)
 * We use **inheritance**, as the accounts can differ on multiple aspects (`TwitterAccount`, `FacebookAccount`). 
 * A **strategy pattern** will be used to get the appropriate content (Facebook, Twitter)
 * However, testing with genuine data can only happen with an internet connection, thus we'll use *mock objects* and *unit tests*. 
@@ -35,11 +36,14 @@ requires.
 pip -r install requirements.txt
 ```
 
+Creating the database is not hard:
 ```
 (venv) > python
 >>> from app import db
 >>> db.create_all()
 ```
+
+The `scripts/helper.py` script might also be helpful
 
 Notes: 
 * `Admin` page can only be accessed by admins obviously. 
