@@ -16,6 +16,12 @@ requires.
 pip -r install requirements.txt
 ```
 
+Notes: 
+* `Admin` page can only be accessed by admins obviously. 
+* If you delete your own account while being logged in, you will get logged out
+  in a fatal way.  
+
+
 Coming up:
 * `app/constants.py`
 * `templates/404` or `templates/base.html`

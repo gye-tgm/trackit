@@ -12,7 +12,7 @@
                     Logged in as <b>{{ current_user.username }}</b> | {{ render_link("users.logout", "Logout") }} |
 
                     {% if current_user.role == 1 %}
-                        {{ render_link("users.admin", "Admin Page") }}
+                        <a href="/admin">Admin</a>
                     {% endif %}
 
                 {% else %}
