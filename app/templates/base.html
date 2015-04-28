@@ -4,18 +4,30 @@
 {% block content %}
     {% from "forms/macros.html" import render_link %}
     <div class="container">
-        {{ render_link("tracking.index", "Track") }} |
+        <div class="row">
+            <div class="col-xs-4">
+                {{ render_link("tracking.index", "Track") }} |
 
-        {% if current_user.is_authenticated() %}
-            Logged in as <b>{{ current_user.username }}</b> | {{ render_link("users.logout", "Logout") }} |
+                {% if current_user.is_authenticated() %}
+                    Logged in as <b>{{ current_user.username }}</b> | {{ render_link("users.logout", "Logout") }} |
 
-            {% if current_user.role == 1 %}
-                {{ render_link("users.admin", "Admin Page") }}
-            {% endif %}
+                    {% if current_user.role == 1 %}
+                        {{ render_link("users.admin", "Admin Page") }}
+                    {% endif %}
 
-        {% else %}
-            {{ render_link("users.login", "Login") }} | {{ render_link("users.register", "Register") }} |
-        {% endif %}
+                {% else %}
+                    {{ render_link("users.login", "Login") }} | {{ render_link("users.register", "Register") }} |
+                {% endif %}
+            </div>
+        </div>
     </div>
+
     <hr>
+
+
+    <div class="container">
+        {% import "bootstrap/utils.html" as utils %}
+        {{ utils.flashed_messages() }}
+    </div>
+
 {% endblock %}
