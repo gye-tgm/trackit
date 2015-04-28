@@ -12,7 +12,7 @@
                 {{ wtf.quick_form(fbform) }}
             </div>
             <div class="col-xs-4">
-                {% if twaccounts is defined %}
+                {% if twaccounts|length > 0 %}
                     Your Twitter accounts:
                     <ul>
                         {% for x in twaccounts %}
@@ -24,7 +24,7 @@
                 {% endif %}
             </div>
             <div class="col-xs-4">
-                {% if fbaccounts is defined %}
+                {% if fbaccounts|length > 0 %}
                     Your Facebook accounts:
                     <ul>
                         {% for x in fbaccounts %}

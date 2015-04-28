@@ -30,8 +30,8 @@ def index():
         flash("Facebook acount added!")
         return redirect(url_for("tracking.index"))
 
-    twaccounts = filter(lambda x: isinstance(x, TwitterAccount), u.accounts)
-    fbaccounts = filter(lambda x: isinstance(x, FacebookAccount), u.accounts)
+    twaccounts = list(filter(lambda x: isinstance(x, TwitterAccount), u.accounts))
+    fbaccounts = list(filter(lambda x: isinstance(x, FacebookAccount), u.accounts))
 
     return render_template('tracking/index.html', fbform=fbform, twform=twform, twaccounts=twaccounts,
                            fbaccounts=fbaccounts)
