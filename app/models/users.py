@@ -1,4 +1,5 @@
 from app.data import CRUDMixin, db
+from app.models import SocialMediaAccount
 from flask.ext.login import UserMixin
 
 
@@ -12,6 +13,8 @@ class User(db.Model, UserMixin, CRUDMixin):
     username = db.Column(db.String, unique=True)
     password = db.Column(db.String)
     role = db.Column(db.Integer, default=ROLE_USER)
+
+    accounts = db.relationship(SocialMediaAccount, backref='user', lazy='dynamic')
 
     def is_authenticated(self):
         return True
