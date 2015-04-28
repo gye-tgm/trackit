@@ -4,3 +4,4 @@ Flask-WTF==0.9.3
 Flask-Login==0.2.7
 Flask-Bootstrap
 Flask-Admin==1.1.0
+sphinx

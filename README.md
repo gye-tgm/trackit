@@ -1,4 +1,21 @@
-Preparing for the FT Matura
+What this project does
+======================
+
+To put it charitably, users can **observe** people with this tool. For
+instance, they can add the social media links, e.g., Twitter, of a
+celebrity and **observe** them right away!
+
+What you will learn (Model)
+----------------------------
+* A user can track many celebrities, and a celebrity can be tracked by many users. (Many-to-many relationships + Association object, we save a `following_since` variable on purpose)
+* The celebrity has multiple accounts, e.g., Twitter, Facebook, ... (One-to-many relationships)
+* We use **inheritance**, as the accounts can differ on multiple aspects (`TwitterAccount`, `FacebookAccount`). 
+* A **strategy pattern** will be used to get the appropriate content (Facebook, Twitter)
+* However, testing with genuine data can only happen with an internet connection, thus we'll use *mock objects* and *unit tests*. 
+* An **observer pattern** will be used to notify the user.
+
+
+How to install this project
 ===========================
 
 Use `virtualenv` so we can work independently from other projects. For
@@ -21,12 +38,20 @@ Notes:
 * If you delete your own account while being logged in, you will get logged out
   in a fatal way.  
 
+Coming up
+==========
 
-Coming up:
-* `app/constants.py`
-* `templates/404` or `templates/base.html`
+* `templates/404`
 * An appropriate `.gitignore` file (for Python, Sphinx, however, no LaTeX)
-* More packages
+* Find some fixed version for the packages
 * Unit-testing
-* Integration-testing via Mockups
+* Integration-testing via Mockups (for Twitter, ...) 
+
+Excellent resources:
+* https://github.com/mitsuhiko/flask/wiki/Large-app-how-to (Founder of Flask) 
+* https://realpython.com/blog/python/python-web-applications-with-flask-part-ii/ (Realpython Tutorial) 
+* https://www.safaribooksonline.com/library/view/flask-web-development/9781491947585/ch04.html
+
+Helpful projects: 
+* https://github.com/reddit/reddit/tree/master/r2/r2
 

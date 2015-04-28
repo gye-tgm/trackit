@@ -1,6 +1,6 @@
 from app.models import User
 from flask.ext.wtf import Form
-from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
+from sqlalchemy.orm.exc import NoResultFound
 from wtforms import StringField, PasswordField, ValidationError, SubmitField
 from wtforms.validators import InputRequired
 
