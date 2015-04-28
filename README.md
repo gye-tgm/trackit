@@ -1,4 +1,4 @@
-Trackit
+nTrackit
 =======
 
 What is it?
@@ -11,12 +11,13 @@ Using this tool, a user can follow all updates of another user with just this si
 What's included?
 ----------------------------
 * A user can track many users, and a user can be tracked by many users. (Many-to-many relationships + Association object, we save a `following_since` variable on purpose)
-* The user has multiple accounts, e.g., Twitter, Facebook, ... (One-to-many relationships)
-* We use **inheritance**, as the accounts can differ on multiple aspects (`TwitterAccount`, `FacebookAccount`). 
-* A **strategy pattern** will be used to get the appropriate content (Facebook, Twitter)
-* However, testing with genuine data can only happen with an internet connection, thus we'll use *mock objects* and *unit tests*. 
-* An **observer pattern** will be used to notify the user.
-
+* The user has multiple accounts, e.g., Twitter, Facebook, ... (One-to-many relationships) 
+* We use **inheritance**, as the accounts can differ on multiple aspects (`TwitterAccount`, `FacebookAccount`).
+* A **strategy pattern** will be used to get the appropriate content (Facebook, Twitter) **TODO**
+* However, testing with genuine data can only happen with an internet connection, thus we'll use **mock objects** and **unit tests**. **TODO**
+* An **observer pattern** will be used to notify the user. **TODO**
+* A HowTo on generating Sphinx docs. **TODO**
+* 
 
 How to install this project
 ===========================
@@ -53,7 +54,6 @@ Notes:
 Coming up
 ==========
 
-* `templates/404`
 * An appropriate `.gitignore` file (for Python, Sphinx, however, no LaTeX)
 * Find some fixed version for the packages
 * Unit-testing
