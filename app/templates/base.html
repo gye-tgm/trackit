@@ -9,14 +9,14 @@
                 {{ render_link("tracking.index", "Track") }} |
 
                 {% if current_user.is_authenticated() %}
-                    Logged in as <b>{{ current_user.username }}</b> | {{ render_link("users.logout", "Logout") }} |
+                    Logged in as <b>{{ current_user.username }}</b> | {{ render_link("user.logout", "Logout") }} |
 
                     {% if current_user.role == 1 %}
                         <a href="/admin">Admin</a>
                     {% endif %}
 
                 {% else %}
-                    {{ render_link("users.login", "Login") }} | {{ render_link("users.register", "Register") }} |
+                    {{ render_link("user.login", "Login") }} | {{ render_link("user.register", "Register") }} |
                 {% endif %}
             </div>
         </div>

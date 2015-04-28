@@ -3,7 +3,7 @@ from app.users.forms import LoginForm, RegisterForm
 from flask import Blueprint, flash, redirect, url_for, render_template, request
 from flask.ext.login import login_user, login_required, logout_user
 
-mod = Blueprint('users', __name__, template_folder='templates')
+mod = Blueprint('user', __name__, template_folder='templates')
 
 
 @mod.route('/login/', methods=('GET', 'POST'))
@@ -13,7 +13,7 @@ def login():
         login_user(form.user)
         flash("Login successful")
         return redirect(request.args.get("next") or url_for('.index'))
-    return render_template('users/login.html', form=form)
+    return render_template('user/login.html', form=form)
 
 
 @mod.route('/logout/')
@@ -32,13 +32,13 @@ def register():
                            password=form.password.data)
         flash("Registratoin successful")
         return redirect(url_for(".index"))
-    return render_template('users/register.html', form=form)
+    return render_template('user/register.html', form=form)
 
 
 @mod.route('/')
 def index():
-    return render_template('users/index.html')
+    return render_template('user/index.html')
 
 @mod.route('/admin')
 def admin():
-    return render_template('users/admin.html')
+    return render_template('user/admin.html')
