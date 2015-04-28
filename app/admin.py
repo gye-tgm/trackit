@@ -9,7 +9,7 @@ class AuthenticatedModelView(ModelView):
         return login.current_user.is_authenticated()
 
 
-adm.add_view(AuthenticatedModelView(User, db.session))
+# adm.add_view(AuthenticatedModelView(User, db.session))
 adm.add_view(AuthenticatedModelView(Follow, db.session))
 adm.add_view(AuthenticatedModelView(SocialMediaAccount, db.session))
 adm.add_view(AuthenticatedModelView(FacebookAccount, db.session))

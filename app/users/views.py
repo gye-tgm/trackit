@@ -30,7 +30,7 @@ def register():
     if form.validate_on_submit():
         user = User.create(username=form.name.data,
                            password=form.password.data)
-        flash("Registratoin successful")
+        flash("Registration successful")
         return redirect(url_for(".index"))
     return render_template('user/register.html', form=form)
 
