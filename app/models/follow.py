@@ -8,8 +8,8 @@ class Follow(db.Model, CRUDMixin):
     a follows b
     """
     __tablename__ = 'follow'
-    a_id = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
-    b_id = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
+    a_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
+    b_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
 
     following_since = db.Column(db.Date, nullable=False, default=db.func.now())
 

@@ -8,7 +8,7 @@ ROLE_ADMIN = 1
 
 
 class User(db.Model, UserMixin, CRUDMixin):
-    __tablename__ = 'users'
+    __tablename__ = 'user'
 
     username = db.Column(db.String, unique=True)
     password = db.Column(db.String)
