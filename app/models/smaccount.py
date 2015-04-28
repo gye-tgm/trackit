@@ -3,4 +3,5 @@ from app.data import CRUDMixin
 
 
 class SocialMediaAccount(db.Model, CRUDMixin):
-    pass
+    __tablename__ = 'smaccount'
+    celebrity_id = db.Column(db.Integer, db.ForeignKey('celebrity.id'))

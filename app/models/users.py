@@ -1,6 +1,5 @@
 from app.data import CRUDMixin, db
 from flask.ext.login import UserMixin
-from sqlalchemy import Column, String, Integer
 
 
 ROLE_USER = 0
@@ -10,9 +9,9 @@ ROLE_ADMIN = 1
 class User(db.Model, UserMixin, CRUDMixin):
     __tablename__ = 'users'
 
-    username = Column(String, unique=True)
-    password = Column(String)
-    role = Column(Integer, default=ROLE_USER)
+    username = db.Column(db.String, unique=True)
+    password = db.Column(db.String)
+    role = db.Column(db.Integer, default=ROLE_USER)
 
     def is_authenticated(self):
         return True
