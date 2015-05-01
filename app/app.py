@@ -1,7 +1,7 @@
 from threading import Thread
 import time
 from app.crawling.twitter import TwitterCrawler
-from app.models import User, ROLE_ADMIN, Follow, SocialMediaAccount
+from app.models import User, ROLE_ADMIN, Follow, SocialMediaAccount, Post, TwitterPost
 from app.models.facebook.account import FacebookAccount
 from app.models.twitter.account import TwitterAccount
 from flask import Flask, render_template
@@ -52,6 +52,8 @@ def configure_extensions(app):
     admin.add_view(AuthenticatedModelView(SocialMediaAccount, db.session))
     admin.add_view(AuthenticatedModelView(FacebookAccount, db.session))
     admin.add_view(AuthenticatedModelView(TwitterAccount, db.session))
+    admin.add_view(AuthenticatedModelView(Post, db.session))
+    admin.add_view(AuthenticatedModelView(TwitterPost, db.session))
     admin.init_app(app)
 
     Bootstrap(app)
@@ -72,9 +74,11 @@ def configure_hook(app):
 
     @app.before_request
     def before_request():
-        schedule.every(5).seconds.do(twcr.crawl_all)
+        # we shouldn't query so often...
+        # https://dev.twitter.com/rest/public/rate-limiting
+        schedule.every(1).minute.do(twcr.crawl_all)
         t = Thread(target=run_schedule)
-        # t.start()
+        t.start()
 
 
 def configure_blueprints(app):

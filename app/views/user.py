@@ -1,6 +1,6 @@
 from app.forms.user import RegisterForm, LoginForm, AddAccForm, AddFbForm, AddTwitterForm
 from app.models import TwitterAccount, FacebookAccount, Follow
-from flask.ext import login
+from flask.ext import login as flask_login
 
 from flask import Blueprint, flash, redirect, url_for, render_template, request
 from flask.ext.login import login_user, login_required, logout_user
@@ -51,7 +51,7 @@ def settings():
     twform = AddTwitterForm(request.form)
     accform = AddAccForm(request.form)
 
-    u = login.current_user
+    u = flask_login.current_user
 
     if twform.validate_on_submit():
         acc = TwitterAccount(username=twform.twacc.data)

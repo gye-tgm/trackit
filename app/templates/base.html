@@ -32,8 +32,12 @@
                         Signed in as {{ current_user.username }}
                     </p>
                     <p class="navbar-text">
+                        {{ render_link("user.settings", "Settings") }}
+                    </p>
+                    <p class="navbar-text">
                         {{ render_link("user.logout", "Logout") }}
                     </p>
+
                 {% else %}
                     <p class="navbar-text">
                         {{ render_link("user.login", "Login") }}

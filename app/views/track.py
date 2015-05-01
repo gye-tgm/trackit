@@ -17,6 +17,7 @@ def me():
 @mod.route('/following')
 @login_required
 def following():
+    # TODO: to be continued ...
     return render_template('404.html')
 
 @mod.route('/')
