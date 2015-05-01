@@ -24,12 +24,29 @@ def create_app(config_object):
     configure_blueprints(app)
     configure_extensions(app)
     configure_error_handlers(app)
+
+    if app.config['USE_ADMIN_INTERFACE']:
+        configure_admin(app)
     return app
 
 
 def configure_app(app, config_object):
     app.config.from_object(config_object)
 
+
+def configure_admin(app):
+    class AuthenticatedModelView(ModelView):
+        def is_accessible(self):
+            return login.current_user.is_authenticated() and login.current_user.role == ROLE_ADMIN
+
+    admin.add_view(AuthenticatedModelView(User, db.session, endpoint='myuser'))
+    admin.add_view(AuthenticatedModelView(Follow, db.session))
+    admin.add_view(AuthenticatedModelView(SocialMediaAccount, db.session))
+    admin.add_view(AuthenticatedModelView(FacebookAccount, db.session))
+    admin.add_view(AuthenticatedModelView(TwitterAccount, db.session))
+    admin.add_view(AuthenticatedModelView(Post, db.session))
+    admin.add_view(AuthenticatedModelView(TwitterPost, db.session))
+    admin.init_app(app)
 
 def configure_extensions(app):
     # http://stackoverflow.com/questions/19437883/when-scattering-flask-models-runtimeerror-application-not-registered-on-db-w
@@ -43,18 +60,7 @@ def configure_extensions(app):
         return User.get(int(id))
     login_manager.init_app(app)
 
-    class AuthenticatedModelView(ModelView):
-        def is_accessible(self):
-            return login.current_user.is_authenticated() and login.current_user.role == ROLE_ADMIN
 
-    admin.add_view(AuthenticatedModelView(User, db.session, endpoint='myuser'))
-    admin.add_view(AuthenticatedModelView(Follow, db.session))
-    admin.add_view(AuthenticatedModelView(SocialMediaAccount, db.session))
-    admin.add_view(AuthenticatedModelView(FacebookAccount, db.session))
-    admin.add_view(AuthenticatedModelView(TwitterAccount, db.session))
-    admin.add_view(AuthenticatedModelView(Post, db.session))
-    admin.add_view(AuthenticatedModelView(TwitterPost, db.session))
-    admin.init_app(app)
 
     Bootstrap(app)
 
