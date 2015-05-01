@@ -14,10 +14,10 @@
 
             <div class="navbar-left">
                 <p class="navbar-text">
-                    {{ render_link("tracking.index", "Home") }}
+                    {{ render_link("track.index", "Home") }}
                 </p>
                 <p class="navbar-text">
-                    <a href="{{ url_for("post.me") }}">Me</a>
+                    <a href="{{ url_for("track.me") }}">Me</a>
                 </p>
                 {% if current_user.role == 1 %}
                     <p class="navbar-text">

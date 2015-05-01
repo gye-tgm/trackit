@@ -1,8 +1,29 @@
 from app.models import User
 from flask.ext.wtf import Form
 from sqlalchemy.orm.exc import NoResultFound
-from wtforms import StringField, PasswordField, ValidationError, SubmitField
+from wtforms import StringField, SubmitField, ValidationError, PasswordField
 from wtforms.validators import InputRequired
+
+
+class AddTwitterForm(Form):
+    twacc = StringField('Twitter Username', [InputRequired()])
+    twsubmit = SubmitField('Add Twitter Account')
+
+
+class AddFbForm(Form):
+    fburl = StringField('Facebook URL', [InputRequired()])
+    fbsubmit = SubmitField('Add Facebook Account')
+
+
+class AddAccForm(Form):
+    user = StringField('Username', [InputRequired()])
+    accsubmit = SubmitField('Submit')
+
+    def validate_user(form, field):
+        try:
+            form.user = User.query.filter_by(username=form.user.data).one()
+        except NoResultFound:
+            raise ValidationError("No such user exists")
 
 
 class LoginForm(Form):
@@ -35,3 +56,4 @@ class RegisterForm(Form):
     def validate_name(form, field):
         if User.query.filter(User.username == form.name.data).count() > 0:
             raise ValidationError("User already exists")
+

@@ -1,6 +1,9 @@
-from app.data import CRUDMixin, db
-from app.models import SocialMediaAccount
+from app.data import CRUDMixin
+from app.extensions import db
+from app.models.account import SocialMediaAccount
+from app.models.facebook.account import FacebookAccount
 from app.models.post import Post
+from app.models.twitter.account import TwitterAccount
 from flask.ext.login import UserMixin
 
 
@@ -18,6 +21,8 @@ class User(db.Model, UserMixin, CRUDMixin):
     accounts = db.relationship(SocialMediaAccount, backref='user', lazy='dynamic')
     posts = db.relationship(Post, backref='user', lazy='dynamic')
 
+    following = db.relationship('Follow', backref="follower", foreign_keys='Follow.a_id')
+
     def is_authenticated(self):
         return True
 
@@ -30,9 +35,21 @@ class User(db.Model, UserMixin, CRUDMixin):
     def get_id(self):
         return str(self.id)
 
+    def get_following(self):
+        return [f.b for f in self.following]
+
+    def get_followers(self):
+        return [f.follower for f in self.follow_assoc]
+
     def is_valid_password(self, password):
         # normally you would compare the hash here
         return self.password == password
+
+    def get_twitter_accounts(self):
+        return list(filter(lambda x: isinstance(x, TwitterAccount), self.accounts))
+
+    def get_facebook_accounts(self):
+        return list(filter(lambda x: isinstance(x, FacebookAccount), self.accounts))
 
     def __repr__(self):
         return "<User #{:d}>".format(self.id)

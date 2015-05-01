@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    {{ super() }}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                {% if current_user.is_authenticated() %}
+                    <p>Howdy {{ current_user.username }}! </p>
+                    <p>Go checkout those you {{ render_link('track.following', 'follow') }} or
+                        just {{ render_link('track.me', 'your posts') }}</p>
+                {% else %}
+                    You are not logged in!
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

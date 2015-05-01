@@ -28,12 +28,47 @@
                     Your Facebook accounts:
                     <ul>
                         {% for x in fbaccounts %}
-                            <li> URL: {{ x.url}}</li>
+                            <li> URL: {{ x.url }}</li>
                         {% endfor %}
                     </ul>
                 {% else %}
                     You have no Facebook accounts registered.
                 {% endif %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <p>
+                    Add someone to follow:
+                </p>
+                {{ wtf.quick_form(accform) }}
+            </div>
+            <div class="col-xs-4">
+                {% if following|length > 0 %}
+                    <p>
+                        You follow {{ following|length }} accounts:
+                    </p>
+                    <ul>
+                        {% for user in following %}
+                            <li>{{ user.username }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>
+                        You follow no one! Add someone on the left hand side!
+                    </p>
+                {% endif %}
+            </div>
+            <div class="col-xs-4">
+                <p>
+                    {{ followers|length }} users follow you:
+                </p>
+                <ul>
+                    {% for user in followers %}
+                        <li>{{ user.username }}</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
