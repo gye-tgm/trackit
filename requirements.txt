@@ -4,9 +4,11 @@ Flask-WTF==0.9.3
 Flask-Login==0.2.7
 Flask-Bootstrap
 Flask-Admin==1.1.0
+
 Flask-Testing
 coverage
 sphinx
-schedule
+sphinx_rtd_theme
 
+schedule
 tweepy

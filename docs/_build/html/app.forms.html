@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>app.forms package &mdash; Trackit 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Trackit 1.0 documentation" href="index.html" />
+    <link rel="up" title="app package" href="app.html" />
+    <link rel="next" title="app.models package" href="app.models.html" />
+    <link rel="prev" title="app.crawling package" href="app.crawling.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.models.html" title="app.models package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.crawling.html" title="app.crawling package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Trackit 1.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="app-forms-package">
+<h1>app.forms package<a class="headerlink" href="#app-forms-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-app.forms.user">
+<span id="app-forms-user-module"></span><h2>app.forms.user module<a class="headerlink" href="#module-app.forms.user" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.forms.user.AddAccForm">
+<em class="property">class </em><code class="descclassname">app.forms.user.</code><code class="descname">AddAccForm</code><span class="sig-paren">(</span><em>formdata=&lt;class 'flask_wtf.form._Auto'&gt;</em>, <em>obj=None</em>, <em>prefix=''</em>, <em>csrf_context=None</em>, <em>secret_key=None</em>, <em>csrf_enabled=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.AddAccForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_wtf.form.Form</span></code></p>
+<dl class="attribute">
+<dt id="app.forms.user.AddAccForm.accsubmit">
+<code class="descname">accsubmit</code><em class="property"> = &lt;UnboundField(SubmitField, ('Submit',), {})&gt;</em><a class="headerlink" href="#app.forms.user.AddAccForm.accsubmit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.AddAccForm.user">
+<code class="descname">user</code><em class="property"> = &lt;UnboundField(StringField, ('Username', [&lt;wtforms.validators.InputRequired object at 0x104a3b780&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.AddAccForm.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.forms.user.AddAccForm.validate_user">
+<code class="descname">validate_user</code><span class="sig-paren">(</span><em>form</em>, <em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.AddAccForm.validate_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.forms.user.AddFbForm">
+<em class="property">class </em><code class="descclassname">app.forms.user.</code><code class="descname">AddFbForm</code><span class="sig-paren">(</span><em>formdata=&lt;class 'flask_wtf.form._Auto'&gt;</em>, <em>obj=None</em>, <em>prefix=''</em>, <em>csrf_context=None</em>, <em>secret_key=None</em>, <em>csrf_enabled=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.AddFbForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_wtf.form.Form</span></code></p>
+<dl class="attribute">
+<dt id="app.forms.user.AddFbForm.fbsubmit">
+<code class="descname">fbsubmit</code><em class="property"> = &lt;UnboundField(SubmitField, ('Add Facebook Account',), {})&gt;</em><a class="headerlink" href="#app.forms.user.AddFbForm.fbsubmit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.AddFbForm.fburl">
+<code class="descname">fburl</code><em class="property"> = &lt;UnboundField(StringField, ('Facebook URL', [&lt;wtforms.validators.InputRequired object at 0x104a3b550&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.AddFbForm.fburl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.forms.user.AddTwitterForm">
+<em class="property">class </em><code class="descclassname">app.forms.user.</code><code class="descname">AddTwitterForm</code><span class="sig-paren">(</span><em>formdata=&lt;class 'flask_wtf.form._Auto'&gt;</em>, <em>obj=None</em>, <em>prefix=''</em>, <em>csrf_context=None</em>, <em>secret_key=None</em>, <em>csrf_enabled=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.AddTwitterForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_wtf.form.Form</span></code></p>
+<dl class="attribute">
+<dt id="app.forms.user.AddTwitterForm.twacc">
+<code class="descname">twacc</code><em class="property"> = &lt;UnboundField(StringField, ('Twitter Username', [&lt;wtforms.validators.InputRequired object at 0x104a3b438&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.AddTwitterForm.twacc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.AddTwitterForm.twsubmit">
+<code class="descname">twsubmit</code><em class="property"> = &lt;UnboundField(SubmitField, ('Add Twitter Account',), {})&gt;</em><a class="headerlink" href="#app.forms.user.AddTwitterForm.twsubmit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.forms.user.LoginForm">
+<em class="property">class </em><code class="descclassname">app.forms.user.</code><code class="descname">LoginForm</code><span class="sig-paren">(</span><em>formdata=&lt;class 'flask_wtf.form._Auto'&gt;</em>, <em>obj=None</em>, <em>prefix=''</em>, <em>csrf_context=None</em>, <em>secret_key=None</em>, <em>csrf_enabled=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.LoginForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_wtf.form.Form</span></code></p>
+<dl class="attribute">
+<dt id="app.forms.user.LoginForm.name">
+<code class="descname">name</code><em class="property"> = &lt;UnboundField(StringField, ('Username', [&lt;wtforms.validators.InputRequired object at 0x104a450b8&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.LoginForm.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.LoginForm.password">
+<code class="descname">password</code><em class="property"> = &lt;UnboundField(PasswordField, ('Password', [&lt;wtforms.validators.InputRequired object at 0x104a45e10&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.LoginForm.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.LoginForm.submit">
+<code class="descname">submit</code><em class="property"> = &lt;UnboundField(SubmitField, ('Login',), {})&gt;</em><a class="headerlink" href="#app.forms.user.LoginForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.forms.user.LoginForm.validate_name">
+<code class="descname">validate_name</code><span class="sig-paren">(</span><em>form</em>, <em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.LoginForm.validate_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.forms.user.LoginForm.validate_password">
+<code class="descname">validate_password</code><span class="sig-paren">(</span><em>form</em>, <em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.LoginForm.validate_password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.forms.user.RegisterForm">
+<em class="property">class </em><code class="descclassname">app.forms.user.</code><code class="descname">RegisterForm</code><span class="sig-paren">(</span><em>formdata=&lt;class 'flask_wtf.form._Auto'&gt;</em>, <em>obj=None</em>, <em>prefix=''</em>, <em>csrf_context=None</em>, <em>secret_key=None</em>, <em>csrf_enabled=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.RegisterForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_wtf.form.Form</span></code></p>
+<dl class="attribute">
+<dt id="app.forms.user.RegisterForm.confirm">
+<code class="descname">confirm</code><em class="property"> = &lt;UnboundField(PasswordField, ('Confirm', [&lt;wtforms.validators.InputRequired object at 0x104a509e8&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.RegisterForm.confirm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.RegisterForm.name">
+<code class="descname">name</code><em class="property"> = &lt;UnboundField(StringField, ('Username', [&lt;wtforms.validators.InputRequired object at 0x104a506d8&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.RegisterForm.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.RegisterForm.password">
+<code class="descname">password</code><em class="property"> = &lt;UnboundField(PasswordField, ('Password', [&lt;wtforms.validators.InputRequired object at 0x104a50780&gt;]), {})&gt;</em><a class="headerlink" href="#app.forms.user.RegisterForm.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.forms.user.RegisterForm.submit">
+<code class="descname">submit</code><em class="property"> = &lt;UnboundField(SubmitField, ('Register',), {})&gt;</em><a class="headerlink" href="#app.forms.user.RegisterForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.forms.user.RegisterForm.validate_name">
+<code class="descname">validate_name</code><span class="sig-paren">(</span><em>form</em>, <em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.RegisterForm.validate_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.forms.user.RegisterForm.validate_password">
+<code class="descname">validate_password</code><span class="sig-paren">(</span><em>form</em>, <em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#app.forms.user.RegisterForm.validate_password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.forms">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.forms" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">app.forms package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.forms.user">app.forms.user module</a></li>
+<li><a class="reference internal" href="#module-app.forms">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="app.crawling.html"
+                        title="previous chapter">app.crawling package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="app.models.html"
+                        title="next chapter">app.models package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.forms.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Gary Ye.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.3</a>
+      
+      |
+      <a href="_sources/app.forms.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

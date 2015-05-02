@@ -5,6 +5,15 @@ from app.extensions import twitter_api
 
 
 class TwitterCrawler(Crawler):
+    """
+    The TwitterCrawler is responsible for crawling Twitter posts that will automatically be stored into the database.
+
+    To use the TwitterCrawler approriately, use the following code
+
+        twitter_crawler = TwitterCrawler()
+        twitter_crawler.crawl_all()
+    """
+
     def crawl_user(self, user):
         """
         Crawls a certain number of posts from the given user's Twitter accounts and stores the data into the database.

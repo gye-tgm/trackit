@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>app.models package &mdash; Trackit 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Trackit 1.0 documentation" href="index.html" />
+    <link rel="up" title="app package" href="app.html" />
+    <link rel="next" title="app.models.facebook package" href="app.models.facebook.html" />
+    <link rel="prev" title="app.forms package" href="app.forms.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="app.models.facebook.html" title="app.models.facebook package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="app.forms.html" title="app.forms package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Trackit 1.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="app.html" accesskey="U">app package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="app-models-package">
+<h1>app.models package<a class="headerlink" href="#app-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="app.models.facebook.html">app.models.facebook package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="app.models.facebook.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.models.facebook.html#module-app.models.facebook.account">app.models.facebook.account module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.models.facebook.html#module-app.models.facebook">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="app.models.twitter.html">app.models.twitter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="app.models.twitter.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.models.twitter.html#module-app.models.twitter.account">app.models.twitter.account module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.models.twitter.html#module-app.models.twitter.post">app.models.twitter.post module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.models.twitter.html#module-app.models.twitter">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-app.models.account">
+<span id="app-models-account-module"></span><h2>app.models.account module<a class="headerlink" href="#module-app.models.account" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.models.account.SocialMediaAccount">
+<em class="property">class </em><code class="descclassname">app.models.account.</code><code class="descname">SocialMediaAccount</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.account.SocialMediaAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code>, <a class="reference internal" href="app.html#app.data.CRUDMixin" title="app.data.CRUDMixin"><code class="xref py py-class docutils literal"><span class="pre">app.data.CRUDMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="app.models.account.SocialMediaAccount.discriminator">
+<code class="descname">discriminator</code><a class="headerlink" href="#app.models.account.SocialMediaAccount.discriminator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.account.SocialMediaAccount.id">
+<code class="descname">id</code><a class="headerlink" href="#app.models.account.SocialMediaAccount.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.account.SocialMediaAccount.user_id">
+<code class="descname">user_id</code><a class="headerlink" href="#app.models.account.SocialMediaAccount.user_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.models.follow">
+<span id="app-models-follow-module"></span><h2>app.models.follow module<a class="headerlink" href="#module-app.models.follow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.models.follow.Follow">
+<em class="property">class </em><code class="descclassname">app.models.follow.</code><code class="descname">Follow</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.follow.Follow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code>, <a class="reference internal" href="app.html#app.data.CRUDMixin" title="app.data.CRUDMixin"><code class="xref py py-class docutils literal"><span class="pre">app.data.CRUDMixin</span></code></a></p>
+<p>a follows b</p>
+<dl class="attribute">
+<dt id="app.models.follow.Follow.a_id">
+<code class="descname">a_id</code><a class="headerlink" href="#app.models.follow.Follow.a_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.follow.Follow.b">
+<code class="descname">b</code><a class="headerlink" href="#app.models.follow.Follow.b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.follow.Follow.b_id">
+<code class="descname">b_id</code><a class="headerlink" href="#app.models.follow.Follow.b_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.follow.Follow.following_since">
+<code class="descname">following_since</code><a class="headerlink" href="#app.models.follow.Follow.following_since" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.follow.Follow.id">
+<code class="descname">id</code><a class="headerlink" href="#app.models.follow.Follow.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.models.post">
+<span id="app-models-post-module"></span><h2>app.models.post module<a class="headerlink" href="#module-app.models.post" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.models.post.Post">
+<em class="property">class </em><code class="descclassname">app.models.post.</code><code class="descname">Post</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.post.Post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code>, <a class="reference internal" href="app.html#app.data.CRUDMixin" title="app.data.CRUDMixin"><code class="xref py py-class docutils literal"><span class="pre">app.data.CRUDMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="app.models.post.Post.content">
+<code class="descname">content</code><a class="headerlink" href="#app.models.post.Post.content" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.post.Post.discriminator">
+<code class="descname">discriminator</code><a class="headerlink" href="#app.models.post.Post.discriminator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.post.Post.id">
+<code class="descname">id</code><a class="headerlink" href="#app.models.post.Post.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.post.Post.time">
+<code class="descname">time</code><a class="headerlink" href="#app.models.post.Post.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.post.Post.user_id">
+<code class="descname">user_id</code><a class="headerlink" href="#app.models.post.Post.user_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.models.user">
+<span id="app-models-user-module"></span><h2>app.models.user module<a class="headerlink" href="#module-app.models.user" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.models.user.User">
+<em class="property">class </em><code class="descclassname">app.models.user.</code><code class="descname">User</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_sqlalchemy.Model</span></code>, <code class="xref py py-class docutils literal"><span class="pre">flask_login.UserMixin</span></code>, <a class="reference internal" href="app.html#app.data.CRUDMixin" title="app.data.CRUDMixin"><code class="xref py py-class docutils literal"><span class="pre">app.data.CRUDMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="app.models.user.User.accounts">
+<code class="descname">accounts</code><a class="headerlink" href="#app.models.user.User.accounts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.user.User.following">
+<code class="descname">following</code><a class="headerlink" href="#app.models.user.User.following" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.get_facebook_accounts">
+<code class="descname">get_facebook_accounts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.get_facebook_accounts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.get_followers">
+<code class="descname">get_followers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.get_followers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.get_following">
+<code class="descname">get_following</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.get_following" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.get_id">
+<code class="descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.get_twitter_accounts">
+<code class="descname">get_twitter_accounts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.get_twitter_accounts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.user.User.id">
+<code class="descname">id</code><a class="headerlink" href="#app.models.user.User.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.is_active">
+<code class="descname">is_active</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.is_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.is_anonymous">
+<code class="descname">is_anonymous</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.is_anonymous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.is_authenticated">
+<code class="descname">is_authenticated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.is_authenticated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.models.user.User.is_valid_password">
+<code class="descname">is_valid_password</code><span class="sig-paren">(</span><em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#app.models.user.User.is_valid_password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.user.User.password">
+<code class="descname">password</code><a class="headerlink" href="#app.models.user.User.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.user.User.posts">
+<code class="descname">posts</code><a class="headerlink" href="#app.models.user.User.posts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.user.User.role">
+<code class="descname">role</code><a class="headerlink" href="#app.models.user.User.role" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.models.user.User.username">
+<code class="descname">username</code><a class="headerlink" href="#app.models.user.User.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.models" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">app.models package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.models.account">app.models.account module</a></li>
+<li><a class="reference internal" href="#module-app.models.follow">app.models.follow module</a></li>
+<li><a class="reference internal" href="#module-app.models.post">app.models.post module</a></li>
+<li><a class="reference internal" href="#module-app.models.user">app.models.user module</a></li>
+<li><a class="reference internal" href="#module-app.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="app.forms.html"
+                        title="previous chapter">app.forms package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="app.models.facebook.html"
+                        title="next chapter">app.models.facebook package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.models.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Gary Ye.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.3</a>
+      
+      |
+      <a href="_sources/app.models.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,16 +1,17 @@
-.. trackit documentation master file, created by
-   sphinx-quickstart on Sat May  2 09:24:00 2015.
+.. Trackit documentation master file, created by
+   sphinx-quickstart on Sat May  2 10:27:15 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to trackit's documentation!
+Welcome to Trackit's documentation!
 ===================================
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 3
 
+    app
 
 
 Indices and tables
