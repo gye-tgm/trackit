@@ -3,7 +3,7 @@ from app.models import User, Follow
 from tests.test_base import BaseTestCase
 
 
-class MyTestCase(BaseTestCase):
+class FollowTest(BaseTestCase):
     def test_following(self):
         u1 = User.create(username='gary')
         u2 = User.create(username='admin')
