@@ -14,10 +14,12 @@ class BaseConfiguration(object):
     ACCESS_TOKEN = '2160721916-7LppGgEidL7Gdq5RrP42rPQ9iM6zy7VpmXlX6rb'
     ACCESS_TOKEN_SECRET = 'mu7l5stXre4OyYikZUen6TpEXG9FZkmzxgcs8sVL3jRIx'
     USE_ADMIN_INTERFACE = True
+    USE_HOOK = True
 
 
 class TestConfiguration(BaseConfiguration):
     TESTING = True
     WTF_CSRF_ENABLED = False
     USE_ADMIN_INTERFACE = False
+    USE_HOOK = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'

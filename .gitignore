@@ -7,3 +7,7 @@ venv/
 app.db
 
 doc/_build
+
+bin/
+include/
+lib

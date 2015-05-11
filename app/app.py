@@ -20,7 +20,9 @@ def create_app(config_object):
     app.config.from_object(config_object)
 
     configure_app(app, config_object)
-    configure_hook(app)
+
+    if app.config['USE_HOOK']:
+        configure_hook(app)
     configure_blueprints(app)
     configure_extensions(app)
     configure_error_handlers(app)
