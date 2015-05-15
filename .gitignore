@@ -15,3 +15,7 @@ build/
 bin/
 include/
 lib
+
+.coverage
+dist
+htmlcov

@@ -5,6 +5,11 @@ from app.extensions import db
 
 
 class BaseTestCase(TestCase):
+    """
+    Classes that inherit this class are able to test with the config.TestConfiguration setup that is provided in
+    config.py.
+    """
+
     def create_app(self):
         return create_app('config.TestConfiguration')
 

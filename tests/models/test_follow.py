@@ -1,4 +1,5 @@
 import unittest
+
 from app.models import User, Follow
 from tests.test_base import BaseTestCase
 

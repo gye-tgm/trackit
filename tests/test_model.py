@@ -1,5 +1,6 @@
 import unittest
-from tests.test_follow import FollowTest
+
+from tests.models.test_follow import FollowTest
 
 
 def suite():
