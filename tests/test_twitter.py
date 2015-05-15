@@ -6,6 +6,10 @@ from tests.test_base import BaseTestCase
 
 
 class TwitterCrawlerTest(BaseTestCase):
+    """
+    Those tests will be skipped since we are using the API keys...
+    """
+    @unittest.skip
     def test_crawl(self):
         u1 = User.create(username='gary')
         u1.accounts.append(TwitterAccount(username='GaryYe13'))
@@ -14,6 +18,7 @@ class TwitterCrawlerTest(BaseTestCase):
         t.crawl_user(u1)
         self.assertGreater(len(list(u1.posts)), 1)
 
+    @unittest.skip
     def test_twitter(self):
         new_tweets = twitter_api.user_timeline('GaryYe13')
         for tw in new_tweets:
