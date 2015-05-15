@@ -1,3 +1,4 @@
+import unittest
 from app.crawling.twitter import TwitterCrawler
 from app.models import User, TwitterAccount
 from app.extensions import twitter_api
@@ -17,3 +18,6 @@ class TwitterCrawlerTest(BaseTestCase):
         new_tweets = twitter_api.user_timeline('GaryYe13')
         for tw in new_tweets:
             print(tw.text)
+
+if __name__ == '__main__':
+    unittest.main()

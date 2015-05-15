@@ -4,5 +4,5 @@ setup(
     version='0.1',
     author='Gary Ye',
     packages=find_packages(),
-    test_suite='tests.all'
+    test_suite='tests'
     )

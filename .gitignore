@@ -6,8 +6,10 @@ venv/
 
 app.db
 
+# setup.py
 doc/_build
 build/
+*.egg-info
 
 # virtualenv 
 bin/

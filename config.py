@@ -23,4 +23,5 @@ class TestConfiguration(BaseConfiguration):
     WTF_CSRF_ENABLED = False
     USE_ADMIN_INTERFACE = False
     USE_HOOK = False
+    SQLALCHEMY_ECHO = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
