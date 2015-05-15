@@ -1,5 +1,5 @@
-app
-===
+Trackit
+=======
 
 .. toctree::
    :maxdepth: 4

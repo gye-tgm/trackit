@@ -14,6 +14,7 @@ class BaseConfiguration(object):
     ACCESS_TOKEN = '2160721916-7LppGgEidL7Gdq5RrP42rPQ9iM6zy7VpmXlX6rb'
     ACCESS_TOKEN_SECRET = 'mu7l5stXre4OyYikZUen6TpEXG9FZkmzxgcs8sVL3jRIx'
     USE_ADMIN_INTERFACE = True
+    BOOTSTRAP_SERVE_LOCAL = True
 
 
 class TestConfiguration(BaseConfiguration):

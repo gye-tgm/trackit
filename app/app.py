@@ -48,6 +48,7 @@ def configure_admin(app):
     admin.add_view(AuthenticatedModelView(TwitterPost, db.session))
     admin.init_app(app)
 
+
 def configure_extensions(app):
     # http://stackoverflow.com/questions/19437883/when-scattering-flask-models-runtimeerror-application-not-registered-on-db-w
     db.app = app
@@ -59,8 +60,6 @@ def configure_extensions(app):
     def load_user(id):
         return User.get(int(id))
     login_manager.init_app(app)
-
-
 
     Bootstrap(app)
 
