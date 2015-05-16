@@ -17,4 +17,3 @@ class UserViewsTests(BaseTestCase):
             self.client.post(url_for('user.login'), data={'name': 'joe', 'password': '12345'})
             self.client.get(url_for("user.logout"))
             self.assertTrue(current_user.is_anonymous())
-

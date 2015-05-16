@@ -25,3 +25,4 @@ class TestConfiguration(BaseConfiguration):
     USE_HOOK = False
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    LIVESERVER_PORT = 5001
