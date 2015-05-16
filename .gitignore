@@ -4,7 +4,8 @@
 
 venv/
 
-app.db
+**/app.db
+**/test.db
 
 # setup.py
 doc/_build

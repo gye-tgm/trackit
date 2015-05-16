@@ -24,5 +24,6 @@ class TestConfiguration(BaseConfiguration):
     USE_ADMIN_INTERFACE = False
     USE_HOOK = False
     SQLALCHEMY_ECHO = False
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    DATABASE = join(_cwd, 'test.db')
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + DATABASE
     LIVESERVER_PORT = 5001

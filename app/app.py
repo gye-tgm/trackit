@@ -17,7 +17,6 @@ import tweepy
 
 def create_app(config_object):
     app = Flask(__name__)
-    app.config.from_object(config_object)
 
     configure_app(app, config_object)
 
