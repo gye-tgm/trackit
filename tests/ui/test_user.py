@@ -6,6 +6,7 @@ from app.models import User
 from flask.ext.testing import LiveServerTestCase
 from selenium import webdriver
 
+
 class LiveServerTestBase(LiveServerTestCase):
     def create_app(self):
         self.app = create_app(TestConfiguration)

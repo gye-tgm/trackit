@@ -7,8 +7,8 @@ from tests.test_base import BaseTestCase
 class UserTest(BaseTestCase):
     def test_get_users(self):
         u = User.create(username='joe')
-        t = TwitterAccount(username='joe')
-        f = FacebookAccount(url='http://fb.com')
+        t = TwitterAccount.create(username='joe')
+        f = FacebookAccount.create(url='http://fb.com')
         u.accounts.append(t)
         u.accounts.append(f)
         u.save()
